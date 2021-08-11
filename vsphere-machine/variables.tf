@@ -5,17 +5,17 @@ variable "vsphere_datacenter" {
 
 variable "vsphere_resource_pool" {
   type = string
-  default = "Workload 1/Resources"
+  default = "RegionA01-COMP02/Resources"
 }
 
 variable "vsphere_datastore" {
   type = string
-  default = "RegionA01-ISCSI01-COMP01"
+  default = "Region01a-NFS02"
 }
 
 variable "vm_template" {
   type = string
-  default = "ubuntu18"
+  default = "cbase-init-ubuntu-18"
 }
 
 variable "vm_hostname" {
@@ -40,7 +40,7 @@ variable "vm_linked_clone" {
 
 variable "vsphere_network" {
   type = string
-  default = "VM-RegionA01-vDS-COMP"
+  default = "VM Network"
 }
 
 variable "vm_domain" {
@@ -50,7 +50,7 @@ variable "vm_domain" {
 
 variable "vm_ipv4_address" {
   type = string
-  default = "192.168.110.201"
+  default = "192.168.110.245"
 }
 
 variable "vm_ipv4_netmask" {
