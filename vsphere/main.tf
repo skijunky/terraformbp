@@ -8,21 +8,21 @@ provider "vsphere" {
 }
 
 data "vsphere_datacenter" "dc" {
-  name = "sc2dc03"
+  name = "RegionA01"
 }
 
 data "vsphere_datastore" "datastore" {
-  name          = "sc2c01vsan01"
+  name          = "Region01a-NFS02"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
-data "vsphere_resource_pool" "pool" {
-  name          = "pre-prod-staging"
-  datacenter_id = data.vsphere_datacenter.dc.id
-}
+#data "vsphere_resource_pool" "pool" {
+#  name          = "pre-prod-staging"
+#  datacenter_id = data.vsphere_datacenter.dc.id
+#}
 
 data "vsphere_network" "network" {
-  name          = "web"
+  name          = "VM Network"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
