@@ -1,9 +1,9 @@
 terraform {
-  required_version = ">= 0.12"
+  required_version = ">= 0.15.3"
   required_providers {
     vsphere = {
       source = "vsphere"
-      version = ">= 1.24.3"
+      version = ">= 2.0.2"
     }
   }
 }
