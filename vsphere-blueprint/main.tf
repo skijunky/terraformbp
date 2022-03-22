@@ -7,12 +7,6 @@ terraform {
   required_version = ">= 0.12.29"
 }
 
-provider vra {
-  url                           = "https://api.mgmt.cloud.vmware.com"
-  refresh_token                 = "xHTpNYgEjBSZTYQyccjOFqlYN7UQ9Q4FBqFHOuFbAZeQg067tNXhsHa367AsJr63"
-  insecure                      = true
-}
-
 variable "zone_name" {
   type = string
   default = "CMBU-DEMO-861 / RegionA01"
@@ -34,7 +28,7 @@ resource "random_integer" "suffix" {
 }
 
 resource "vra_blueprint" "this" {
-  name        = format("%s-%d", var.blueprint_name, random_integer.suffix.result)
+  name        = var.blueprint_name
   description = "Created by vRA terraform provider"
 
   project_id = vra_project.this.id
@@ -65,13 +59,4 @@ resource "vra_blueprint" "this" {
           image: $${input.image}
           flavor: $${input.flavor}
   EOT
-}
-
-// Example to create a blueprint version and release it
-resource "vra_blueprint_version" "this" {
-  blueprint_id = vra_blueprint.this.id
-  description  = "Released from vRA terraform provider"
-  version      = (random_integer.suffix.result / random_integer.suffix.result)
-  release      = true
-  change_log   = "First version"
 }
