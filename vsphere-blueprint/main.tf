@@ -4,7 +4,7 @@ terraform {
       source  = "vmware/vra"
     }
   }
-  required_version = ">= 0.13.0"
+  required_version = ">= 0.12.29"
 }
 
 provider vra {
