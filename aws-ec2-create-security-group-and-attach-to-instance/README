@@ -1,0 +1,9 @@
+#
+  #     VMware Cloud Assembly Terraform Code Sample     
+  # 
+  # - Creates On-demand AWS Security Group
+  # - Attaches up to 3 Single-NIC Cloud Template Machine Resources to it. 
+  # - Supports multiple instances of the same Machine Resource (count property)
+  # - Creates Ingress and Egress Rules
+  # - Provides Terraform Outputs for created objects 
+  # - Reference: http://kaloferov.com/blog/
