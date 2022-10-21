@@ -20,17 +20,17 @@ variable "region" {
 
 variable "zone" {
   type = string
-  default = "cmbu-demo-84/RegionA01"
+  default = "CMBU-DEMO-882 / RegionA01"
 }
 
 variable "project" {
   type = string
-  default = "Field Demo"
+  default = "TRW-CMBU-DEMO-8.8"
 }
 
 variable "image_name" {
   type = string
-  default = "centos7"
+  default = "ubuntu-18"
 }
 
 variable "network_name" {
