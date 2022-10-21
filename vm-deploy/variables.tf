@@ -35,5 +35,5 @@ variable "image_name" {
 
 variable "network_name" {
   type = string
-  default = "VM Network"
+  default = "Virtual-Machines"
 }
