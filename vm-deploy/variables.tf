@@ -30,7 +30,7 @@ variable "project" {
 
 variable "image_name" {
   type = string
-  default = "ubuntu-18"
+  default = "ubuntu"
 }
 
 variable "network_name" {
