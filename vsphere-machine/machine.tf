@@ -6,15 +6,15 @@ variable "vm_name" {
 provider "vsphere" {
 
   # If you have a self-signed cert
-  allow_unverified_ssl = true
+  allow_unverified_ssl = false
 }
 
 data "vsphere_datacenter" "dc" {
-  name = "Datacenter"
+  name = "RegionA01"
 }
 
 data "vsphere_datastore" "datastore" {
-  name          = "datastore1"
+  name          = "Region01a-NFS03"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 
@@ -24,7 +24,7 @@ data "vsphere_resource_pool" "pool" {
 }
 
 data "vsphere_network" "network" {
-  name          = "vlan55"
+  name          = "Virtual-Machines"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 
