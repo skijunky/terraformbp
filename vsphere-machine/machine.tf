@@ -36,7 +36,6 @@ data "vsphere_network" "network" {
 
 resource "vsphere_virtual_machine" "vm" {
   name             = var.vm_hostname
-  resource_pool_id = data.vsphere_resource_pool.pool.id
   datastore_id     = data.vsphere_datastore.datastore.id
 
   num_cpus = var.vm_cpu_count
