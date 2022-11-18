@@ -3,19 +3,14 @@ variable "vsphere_datacenter" {
   default = "RegionA01"
 }
 
-variable "vsphere_resource_pool" {
-  type = string
-  default = "VRA"
-}
-
 variable "vsphere_datastore" {
   type = string
-  default = "Region01a-NFS02"
+  default = "Region01a-NFS03"
 }
 
 variable "vm_template" {
   type = string
-  default = "cbase-init-ubuntu-18"
+  default = "ubuntu-18"
 }
 
 variable "vm_hostname" {
@@ -50,7 +45,7 @@ variable "vm_domain" {
 
 variable "vm_ipv4_address" {
   type = string
-  default = "192.168.110.201"
+  default = "192.168.110.231"
 }
 
 variable "vm_ipv4_netmask" {
