@@ -9,8 +9,8 @@ variable "instance_type" {
 }
 
 variable "image" {
-  description = "VRA image"
-  default = "ubuntu"
+  description = "AMI"
+  default = "ami-0a63cd87767e10ed4"
 }    
 
 variable "myTag" {
