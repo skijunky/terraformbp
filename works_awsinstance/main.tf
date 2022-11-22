@@ -8,14 +8,18 @@ variable "instance_type" {
   default     = "small"
 }
 
+variable "image" {
+  description = "VRA image"
+  default = "ubuntu"  
+
 variable "myTag" {
   description = "My Input Tag"
   default = "terraform-test"
 }
 
 resource "aws_instance" "machine1" {
-    ami           = "ubuntu"
-    instance_type = "small"
+    ami           = "var.image"
+    instance_type = "var.instance_type"
     availability_zone = "us-west-1b"
     tags = {
       "type" = var.myTag
