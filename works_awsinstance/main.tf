@@ -5,7 +5,7 @@ provider "aws" {
 
 variable "instance_type" {
   description = "AWS instance type"
-  default     = "t2.micro"
+  default     = "small"
 }
 
 variable "myTag" {
@@ -14,8 +14,8 @@ variable "myTag" {
 }
 
 resource "aws_instance" "machine1" {
-    ami           = "ami-0a63cd87767e10ed4"
-    instance_type = "t2.micro"
+    ami           = "ubuntu"
+    instance_type = "small"
     availability_zone = "us-west-1b"
     tags = {
       "type" = var.myTag
