@@ -10,7 +10,8 @@ variable "instance_type" {
 
 variable "image" {
   description = "VRA image"
-  default = "ubuntu"  
+  default = "ubuntu"
+}    
 
 variable "myTag" {
   description = "My Input Tag"
