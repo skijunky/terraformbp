@@ -20,7 +20,7 @@ variable "project_id" {
 
 variable "deployment_name" {
   type = string
-  default = "TF-deploy2"
+  default = "TF-service-deploy-2"
 }
 
 variable "catalog_item_id" {
