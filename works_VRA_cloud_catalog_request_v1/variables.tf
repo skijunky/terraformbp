@@ -25,9 +25,9 @@ variable "deployment_name" {
 
 variable "catalog_item_id" {
   type = string
-  default = "f6fbb05b-9e54-36b9-92ba-b9085512270e"
+  default = "701abc91-6e00-3172-a5f2-e43c7003ce89"
 }
 variable "catalog_item_version" {
   type = string
-  default = "3"
+  default = "2"
 }
